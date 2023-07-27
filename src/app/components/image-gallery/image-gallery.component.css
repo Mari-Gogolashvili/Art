@@ -1,0 +1,145 @@
+section {
+  height:calc(100vh - 10rem);
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding:0 2rem;
+}
+
+/**-----------------------------------left------------------------------------------**/
+ .left {
+  width: 50%;
+  height: 100%;
+}
+.img-container{
+  width: 100%;
+  height: 100%;
+
+}
+.image{
+  height: 70%;
+  width: 100%;
+  margin-bottom: 1.2rem;
+}
+
+
+.image img{
+  width: 100%;
+  height: 100%;
+
+}
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: contrast(120%);
+}
+#preview {
+  border: 2px solid white;
+  box-shadow: 0 0 5px var(--shadowColor), 0 0 8px var(--shadowColor), 0 0 11px var(--shadowColor);
+  border-radius: 6px;
+}
+.img-prev {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 30%;
+}
+.img-slide {
+  cursor: pointer;
+  opacity: 0.3;
+  margin: 0 0.4rem;
+  width: 24%;
+}
+.img-slide:nth-of-type(1) {
+  margin-left: 0;
+}
+.img-slide:nth-of-type(4) {
+  margin-right: 0;
+}
+
+.active {
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 5px #9667e0, 0 0 8px #9667e0, 0 0 11px #9667e0;
+  opacity: 1;
+  border-radius: 5px;
+} 
+
+/**-----------------------------------right------------------------------------------**/
+.right {
+  width: 50%;
+  min-height: 100%;
+  color: white;
+}
+.right-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.title {
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title h1 {
+  text-align: center;
+  font-size: 4rem;
+  border-bottom: 2px solid rgb(243, 203, 253);
+  padding: 1rem;
+  text-shadow: 0 0 10px #9667e0, 0 0 15px #9667e0, 0 0 20px #9667e0;
+}
+
+.content {
+  height: 70%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+.content p {
+  width: 80%;
+  text-align: center;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: rgb(234, 211, 251);
+}
+
+/**-----------------------------------media------------------------------------------**/
+
+@media (max-width: 897px) {
+  section{
+    width: 100%;
+    height: max-content;
+  }
+  .left,
+  .right {
+    width: 100%;
+    height: 50%;
+  }
+  .image{
+    height: 30rem;
+  }
+  .title {
+    margin: 2rem 0;
+  }
+
+  .content p {
+    font-size: 1.3rem;
+  }
+  .title h1 {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 470px) {
+  section{
+    padding: 0 0.2rem;
+  }
+  .image{
+    height: 20rem;
+  }
+}

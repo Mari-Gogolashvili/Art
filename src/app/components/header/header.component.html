@@ -1,0 +1,41 @@
+<header>
+  <nav>
+    <div class="logo">
+      <h1>Art<span>.</span></h1>
+    </div>
+    <!-- 
+    <div class="menu-icon" [class.menu_iconClass]="menu_icon_variable"(click)="openMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div> -->
+    <div class="menu" [class.menuClass]="menuVariable">
+      <ul>
+        <li>
+          <a
+            routerLink="/home"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Home</a
+          >
+        </li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Home</a></li>
+      </ul>
+    </div>
+
+    <div class="icons">
+      <ul>
+        <li>
+          <a href="#"><i class="fa-solid fa-user"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-solid fa-heart"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-solid fa-bell"></i></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
