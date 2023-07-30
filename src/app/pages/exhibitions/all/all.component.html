@@ -1,0 +1,10 @@
+<ng-container *ngIf="vm$ | async as vm">
+  <app-spinner *ngIf="vm.loading"></app-spinner>
+  <div class="container">
+    <app-exhibition-card
+      class="col"
+      *ngFor="let data of vm.data"
+      [data]="data"
+    ></app-exhibition-card>
+  </div>
+</ng-container>

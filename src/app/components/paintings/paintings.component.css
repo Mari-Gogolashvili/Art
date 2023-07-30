@@ -1,11 +1,12 @@
 section {
   margin-top: 5rem;
-
+  width: 100%;
   height: calc(100vh - 3rem);
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(12, 1fr);
   color: aliceblue;
+  overflow: hidden;
 }
 .first {
   grid-column: 1/5;

@@ -1,0 +1,34 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.custom-loader {
+  width: 60px;
+  height: 60px;
+  display: grid;
+}
+.custom-loader::before,
+.custom-loader::after {
+  content: "";
+  grid-area: 1/1;
+  background: var(--spinner) 50% 0, var(--spinner) 50% 100%,
+    var(--spinner) 100% 50%, var(--spinner) 0 50%;
+  background-size: 15px 15px;
+  background-repeat: no-repeat;
+  animation: s2 1s infinite;
+}
+.custom-loader::before {
+  margin: 5px;
+  filter: hue-rotate(45deg);
+  background-size: 10px 10px;
+  animation-timing-function: linear;
+}
+
+@keyframes s2 {
+  100% {
+    transform: rotate(0.5turn);
+  }
+}

@@ -10,7 +10,14 @@ import { ImageGalleryComponent } from './components/image-gallery/image-gallery.
 import { GalleryDirective } from './directives/gallery.directive';
 import { PaintingsComponent } from './components/paintings/paintings.component';
 import { FooterComponent } from './components/footer/footer.component';
-
+import { ExhibitionsComponent } from './pages/exhibitions/exhibitions.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { ExhibitionCardComponent } from './components/exhibition-card/exhibition-card.component';
+import { AllComponent } from './pages/exhibitions/all/all.component';
+import { DetailsComponent } from './pages/exhibitions/details/details.component';
+import { SpinnerComponent } from './components/spinner/spinner.component';
 
 @NgModule({
   declarations: [
@@ -22,12 +29,15 @@ import { FooterComponent } from './components/footer/footer.component';
     GalleryDirective,
     PaintingsComponent,
     FooterComponent,
+    ExhibitionsComponent,
+    CarouselComponent,
+    ExhibitionCardComponent,
+    AllComponent,
+    DetailsComponent,
+    SpinnerComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

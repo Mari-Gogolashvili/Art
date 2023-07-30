@@ -1,0 +1,15 @@
+<div class="card">
+  <div class="card-image">
+    <img src="https://www.artic.edu/iiif/2/{{data.image_id}}/full/843,/0/default.jpg" [alt]="data.title" />
+    <div class="icons">
+      <a href=""><i class="fa-regular fa-heart"></i></a>
+      <a href="" class="details" routerLink="/exhibitions/details">Details</a>
+      <a href=""><i class="fa-solid fa-share"></i></a>
+    </div>
+  </div>
+
+  <div class="card-content">
+    <h2>{{ data.title }}</h2>
+    <h3>{{ data.artist_display }}</h3>
+  </div>
+</div>

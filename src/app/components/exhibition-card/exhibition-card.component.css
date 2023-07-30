@@ -1,0 +1,67 @@
+.card {
+  position: relative;
+  width: 23rem;
+  height: 40rem;
+  padding-bottom: 3rem;
+  border: 2px solid white;
+  border-radius: 10px;
+  box-shadow: 0 0 5px var(--shadowColor), 0 0 7px var(--shadowColor);
+  color: aliceblue;
+}
+
+.card-image {
+  position: relative;
+  text-align: center;
+  padding-top: 2rem;
+  overflow: hidden;
+}
+img {
+  height: 25rem;
+  width: 86%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.card:hover .card-image img {
+  transform: scale(1.07);
+  border: 2px solid white;
+  box-shadow: 0 0 5px var(--shadowColor), 0 0 7px var(--shadowColor);
+}
+
+.card .card-image .icons {
+  position: absolute;
+  bottom: -7rem;
+  left: 0;
+  right: 0;
+  display: flex;
+}
+
+.card:hover .card-image .icons {
+  bottom: 0;
+}
+
+.card-image .icons a {
+  height: 3rem;
+  line-height: 3rem;
+  font-size: 1.5rem;
+  width: 50%;
+  background-color: rgb(186, 157, 249);
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 5px rgb(37, 18, 79), 0 0 10px rgb(37, 18, 79),
+    0 0 15px rgb(37, 18, 79);
+}
+
+.card-image .icons .details {
+  border-left: 0.1rem solid white;
+  border-right: 0.1rem solid white;
+  width: 100%;
+  font-weight: 300;
+}
+.card-image .icons a:hover {
+  background-color: rgb(249, 240, 253);
+  color: rgb(0, 0, 0);
+  text-shadow: 0 0 5px var(--shadowColor), 0 0 7px var(--shadowColor);
+}
+.card-content {
+  padding-top: 2rem;
+  text-align: center;
+}

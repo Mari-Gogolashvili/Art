@@ -2,9 +2,10 @@
 :root {
   --colorf: rgb(255, 218, 255);
   --colors: rgb(157, 196, 255);
-  --shadowColor:#9667e0;
+  --shadowColor: #9667e0;
+  --spinner: radial-gradient(farthest-side,#766DF4 92%,#0000);
 }
-::selection{
+::selection {
   background-color: rgb(199, 155, 244);
   color: white;
 }
@@ -15,9 +16,9 @@
   list-style: none;
   text-decoration: none;
   border: none;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-weight: 300;
-
+  transition: 0.3s linear;
 }
 html {
   /* background: radial-gradient(ellipse at center, #202020,#121212, #000000); */
