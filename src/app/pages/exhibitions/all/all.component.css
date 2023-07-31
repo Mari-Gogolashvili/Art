@@ -1,7 +1,10 @@
+.search{
+    padding-top: 8rem;
+}
 .container{
-    padding-top: 16rem;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 1.5rem;
+    margin-top: 5rem;
 }

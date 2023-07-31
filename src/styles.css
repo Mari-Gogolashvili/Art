@@ -3,7 +3,8 @@
   --colorf: rgb(255, 218, 255);
   --colors: rgb(157, 196, 255);
   --shadowColor: #9667e0;
-  --spinner: radial-gradient(farthest-side,#766DF4 92%,#0000);
+  --spinner: radial-gradient(farthest-side, #766df4 92%, #0000);
+  --inputColor: rgb(237, 237, 237);
 }
 ::selection {
   background-color: rgb(199, 155, 244);
@@ -18,10 +19,10 @@
   border: none;
   font-family: "Roboto";
   font-weight: 300;
-  transition: 0.3s linear;
+  transition: 0.3s ease-in-out;
+  outline: none;
 }
 html {
-  /* background: radial-gradient(ellipse at center, #202020,#121212, #000000); */
   height: 100%;
   width: 100%;
   background-color: black;

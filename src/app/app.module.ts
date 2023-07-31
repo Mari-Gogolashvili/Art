@@ -11,13 +11,13 @@ import { GalleryDirective } from './directives/gallery.directive';
 import { PaintingsComponent } from './components/paintings/paintings.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ExhibitionsComponent } from './pages/exhibitions/exhibitions.component';
-import { CarouselComponent } from './components/carousel/carousel.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ExhibitionCardComponent } from './components/exhibition-card/exhibition-card.component';
 import { AllComponent } from './pages/exhibitions/all/all.component';
 import { DetailsComponent } from './pages/exhibitions/details/details.component';
 import { SpinnerComponent } from './components/spinner/spinner.component';
+import { SlideshowComponent } from './components/slideshow/slideshow.component';
 
 @NgModule({
   declarations: [
@@ -30,11 +30,12 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
     PaintingsComponent,
     FooterComponent,
     ExhibitionsComponent,
-    CarouselComponent,
     ExhibitionCardComponent,
     AllComponent,
     DetailsComponent,
     SpinnerComponent,
+
+    SlideshowComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],

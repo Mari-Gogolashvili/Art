@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class PaintingsService {
   baseUrl = ENVIRONMENT.baseUrl;
-  url = ENVIRONMENT.url;
+
 
 
   private data$ = new BehaviorSubject<data[]>([]);
@@ -33,7 +33,7 @@ export class PaintingsService {
     this.loading$.next(true);
     return this.http
       .get<getPaintingResponse>(
-        `${this.baseUrl}/${this.url}?limit=80`
+        `${this.baseUrl}?limit=30`
       )
       .subscribe((response) => {
         this.data$.next(response.data);
