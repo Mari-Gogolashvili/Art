@@ -16,7 +16,7 @@ export class AllComponent {
     tap((paramMap) => {
       const search = paramMap.get('search');
       if (search) {
-        this.paintingsService.searchPaintings();
+        this.paintingsService.searchPaintings(search);
       } else {
         this.paintingsService.getPaintings();
       }

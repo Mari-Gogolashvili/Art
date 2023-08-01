@@ -17,10 +17,19 @@
   </div>
   <div class="search-container">
     <div class="input-box">
-      <form name="search">
+      <form role="search">
         <label for="search"></label>
-        <input type="text" id="meal-input" />
-        <i class="fa-solid fa-magnifying-glass" id="search-btn"></i>
+        <input
+          type="text"
+          id="input"
+          aria-label="Search"
+          [(ngModel)]="searchText"
+        />
+        <i
+          class="fa-solid fa-magnifying-glass"
+          id="search-btn"
+          (click)="search.emit(searchText)"
+        ></i>
       </form>
     </div>
   </div>

@@ -11,8 +11,6 @@ import { Router } from '@angular/router';
 export class PaintingsService {
   baseUrl = ENVIRONMENT.baseUrl;
 
-
-
   private data$ = new BehaviorSubject<data[]>([]);
   private loading$ = new BehaviorSubject<boolean>(false);
   private painting$ = new BehaviorSubject<Painting[]>([]);
@@ -32,16 +30,22 @@ export class PaintingsService {
   getPaintings() {
     this.loading$.next(true);
     return this.http
-      .get<getPaintingResponse>(
-        `${this.baseUrl}?limit=30`
-      )
+      .get<getPaintingResponse>(`${this.baseUrl}?limit=50`)
       .subscribe((response) => {
         this.data$.next(response.data);
         this.loading$.next(false);
       });
   }
-  searchPaintings() {}
 
-
-
+  searchPaintings(query: string) {
+    this.loading$.next(true);
+    this.http
+      .post<getPaintingResponse>(`${this.baseUrl}/search`, {
+        params: { q: query },
+      })
+      .subscribe((response) => {
+        this.data$.next(response.data);
+        this.loading$.next(false);
+      });
+  }
 }
