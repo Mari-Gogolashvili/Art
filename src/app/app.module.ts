@@ -11,7 +11,7 @@ import { GalleryDirective } from './directives/gallery.directive';
 import { PaintingsComponent } from './components/paintings/paintings.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ExhibitionsComponent } from './pages/exhibitions/exhibitions.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ExhibitionCardComponent } from './components/exhibition-card/exhibition-card.component';
 import { AllComponent } from './pages/exhibitions/all/all.component';
@@ -44,7 +44,13 @@ import { RegisterComponent } from './pages/user/register/register.component';
     SignInComponent,
     RegisterComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+  ],
   providers: [NgxImageCompressService],
   bootstrap: [AppComponent],
 })

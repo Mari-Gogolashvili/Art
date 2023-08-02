@@ -34,6 +34,9 @@ section {
   text-shadow: 0 0 3px var(--shadowColor), 0 0 4px var(--shadowColor),
     0 0 6px var(--shadowColor);
 }
+.container:hover span {
+  text-shadow: none;
+}
 .left {
   width: 50%;
   height: 100%;
@@ -65,7 +68,7 @@ section {
 .right .title h1 {
   color: white;
   font-size: 2rem;
-  /* margin-bottom: 2rem; */
+  margin-bottom: 2rem;
 }
 form {
   width: 60%;
@@ -73,20 +76,21 @@ form {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 2rem 0;
+  /* margin: 2rem 0; */
   /* align-items: center; */
 }
 .input-container {
   /* display: flex;
-    flex-direction: column;
-    padding: 2rem 0; */
+  flex-direction: column;
+  justify-content: space-around; */
   position: relative;
-  border-bottom: 2px solid #fff;
-  margin: 2.5rem 0;
+  /* border-bottom: 2px solid #fff; */
+  margin: 1.5rem 0;
 }
+
 .input-container label {
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 5px;
   transform: translateY(-50%);
   color: #fff;
@@ -101,8 +105,8 @@ form {
   border: none;
   outline: none;
   font-size: 1.3em;
-  padding: 0 35px 0 5px;
   color: #fff;
+  border-bottom: 2px solid #fff;
 }
 input:focus ~ label,
 input:valid ~ label {
@@ -121,8 +125,8 @@ input {
   font-size: 1.2em;
   top: 20px;
 }
-span{
-  color: var(--shadowColor);
+span {
+  color: rgb(168, 117, 95);
 }
 .buttons {
   display: flex;
@@ -152,6 +156,11 @@ button:hover a {
   text-shadow: 0 0 5px var(--shadowColor), 0 0 8px var(--shadowColor);
 }
 
+.validation-error {
+  color: rgb(182, 125, 101);
+  margin-top: 0.6rem;
+}
+
 @media (max-width: 1133px) {
   .container {
     width: 90%;
@@ -178,7 +187,7 @@ button:hover a {
   button {
     width: 70%;
   }
-  label{
-    font-size: .9rem;
+  label {
+    font-size: 0.9rem;
   }
 }

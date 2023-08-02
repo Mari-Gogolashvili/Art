@@ -8,7 +8,7 @@ section {
 }
 
 .container {
-  height: 80%;
+  height: 90%;
   width: 60%;
   display: flex;
   flex-direction: row;
@@ -80,12 +80,12 @@ form {
   flex-direction: column;
   padding: 2rem 0; */
   position: relative;
-  border-bottom: 2px solid #fff;
+
   margin: 2.5rem 0;
 }
 .input-container label {
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 5px;
   transform: translateY(-50%);
   color: #fff;
@@ -102,6 +102,7 @@ form {
   font-size: 1.3em;
   padding: 0 35px 0 5px;
   color: #fff;
+  border-bottom: 2px solid #fff;
 }
 input:focus ~ label,
 input:valid ~ label {
@@ -111,6 +112,11 @@ input {
   padding: 0.4rem;
   background-color: transparent;
   border-bottom: 1px solid white;
+}
+
+.validation-error {
+  color: rgb(169, 120, 198);
+  margin-top: 0.6rem;
 }
 
 .input-container i {
