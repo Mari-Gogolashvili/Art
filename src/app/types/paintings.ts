@@ -1,5 +1,7 @@
 export interface data {
   id: number;
+  image_url(image_url: any): unknown;
+  compressedImageUrl: string;
   api_model: string;
   api_link: string;
   is_boosted: boolean;
@@ -104,7 +106,12 @@ export interface getPaintingResponse {
 }
 
 export interface Painting {
+  image_id(image_id: any): unknown;
   id: number;
   title: string;
   imageUrl: string;
 }
+
+
+
+

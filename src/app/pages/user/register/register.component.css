@@ -1,0 +1,184 @@
+section {
+  height: 100vh;
+  width: 100%;
+  padding-top: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  height: 90%;
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  border: 2px solid white;
+  border-radius: 7px;
+}
+.container:hover {
+  box-shadow: 0 0 7px var(--shadowColor), 0 0 13px var(--shadowColor),
+    0 0 19px var(--shadowColor);
+}
+
+.container:hover .right .title h1 {
+  text-shadow: 0 0 3px var(--shadowColor), 0 0 5px var(--shadowColor),
+    0 0 9px var(--shadowColor);
+}
+
+.container:hover .input-container label {
+  text-shadow: 0 0 5px var(--shadowColor), 0 0 8px var(--shadowColor),
+    0 0 10px var(--shadowColor);
+}
+
+.container:hover .input-container i {
+  text-shadow: 0 0 3px var(--shadowColor), 0 0 4px var(--shadowColor),
+    0 0 6px var(--shadowColor);
+}
+.left {
+  width: 50%;
+  height: 100%;
+  border-left: 2px solid white;
+}
+.left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.5);
+  border-radius: 8px;
+  object-position: top;
+}
+
+.right {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.right .title h1 {
+  color: white;
+  font-size: 2rem;
+  /* margin-bottom: 2rem; */
+}
+form {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 2rem 0;
+  /* align-items: center; */
+}
+.input-container {
+  /* display: flex;
+    flex-direction: column;
+    padding: 2rem 0; */
+  position: relative;
+  border-bottom: 2px solid #fff;
+  margin: 2.5rem 0;
+}
+.input-container label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 1.1rem;
+  pointer-events: none;
+  transition: 0.5s;
+}
+.input-container input {
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1.3em;
+  padding: 0 35px 0 5px;
+  color: #fff;
+}
+input:focus ~ label,
+input:valid ~ label {
+  top: -5px;
+}
+input {
+  padding: 0.4rem;
+  background-color: transparent;
+  border-bottom: 1px solid white;
+}
+
+.input-container i {
+  position: absolute;
+  right: 8px;
+  color: #fff;
+  font-size: 1.2em;
+  top: 20px;
+}
+span{
+  color: var(--shadowColor);
+}
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+button {
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 30px;
+  padding: 10px 25px;
+  width: 50%;
+  cursor: pointer;
+  margin: 1rem 0;
+}
+button a {
+  color: white;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+button:hover {
+  box-shadow: 0 0 5px var(--shadowColor), 0 0 10px var(--shadowColor);
+}
+button:hover a {
+  text-shadow: 0 0 5px var(--shadowColor), 0 0 8px var(--shadowColor);
+}
+
+@media (max-width: 1133px) {
+  .container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 762px) {
+  section {
+    padding-top: 10rem;
+    height: calc(100% + 6rem);
+  }
+  .left {
+    display: none;
+  }
+  .right {
+    width: 100%;
+  }
+}
+
+@media (max-width: 402px) {
+  form {
+    width: 80%;
+  }
+  button {
+    width: 70%;
+  }
+  label{
+    font-size: .9rem;
+  }
+}

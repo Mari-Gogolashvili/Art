@@ -4,8 +4,10 @@ import { HomeComponent } from './pages/home/home.component';
 import { ExhibitionsComponent } from './pages/exhibitions/exhibitions.component';
 import { AllComponent } from './pages/exhibitions/all/all.component';
 import { DetailsComponent } from './pages/exhibitions/details/details.component';
-import { SignInComponent } from './pages/sign-in/sign-in.component';
 import { FavoritesComponent } from './pages/favorites/favorites.component';
+import { UserComponent } from './pages/user/user.component';
+import { SignInComponent } from './pages/user/sign-in/sign-in.component';
+import { RegisterComponent } from './pages/user/register/register.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -18,8 +20,16 @@ const routes: Routes = [
       { path: '', component: AllComponent },
     ],
   },
-  {path: 'user' ,component:SignInComponent},
-  {path:'favorites' , component:FavoritesComponent},
+  {
+    path: 'user',
+    component: UserComponent,
+    children: [
+      { path: 'signIn', component: SignInComponent },
+      { path: 'register', component: RegisterComponent },
+      { path: '', component: SignInComponent  , pathMatch:'full'},
+    ],
+  },
+  { path: 'favorites', component: FavoritesComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
 ];
 

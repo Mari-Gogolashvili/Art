@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ENVIRONMENT } from 'src/environment/environment';
 import { Painting, data, getPaintingResponse } from '../types/paintings';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, catchError, map, of } from 'rxjs';
 import { Router } from '@angular/router';
 
 @Injectable({
@@ -30,7 +30,7 @@ export class PaintingsService {
   getPaintings() {
     this.loading$.next(true);
     return this.http
-      .get<getPaintingResponse>(`${this.baseUrl}?limit=50`)
+      .get<getPaintingResponse>(`${this.baseUrl}?limit=30`)
       .subscribe((response) => {
         this.data$.next(response.data);
         this.loading$.next(false);
@@ -40,7 +40,7 @@ export class PaintingsService {
   searchPaintings(query: string) {
     this.loading$.next(true);
     this.http
-      .post<getPaintingResponse>(`${this.baseUrl}/search`, {
+      .post<getPaintingResponse>(`${this.baseUrl}/search?`, {
         params: { q: query },
       })
       .subscribe((response) => {
@@ -48,4 +48,10 @@ export class PaintingsService {
         this.loading$.next(false);
       });
   }
+
+  getPaintingById(id: number) {
+    return this.http.get<data>(`${this.baseUrl}/${id}`);
+  }
+
+  
 }

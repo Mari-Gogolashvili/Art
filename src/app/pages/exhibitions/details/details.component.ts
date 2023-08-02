@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { switchMap } from 'rxjs';
+import { PaintingsService } from 'src/app/services/paintings.service';
 
 @Component({
   selector: 'app-details',
@@ -6,5 +9,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./details.component.css']
 })
 export class DetailsComponent {
+  data$ = this.activatedRoute.paramMap.pipe(
+    switchMap((paramMap) =>
+      this.paintingsService.getPaintingById(Number(paramMap.get('id')))
+    )
+  );
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private paintingsService: PaintingsService
+  ) {}
 
 }

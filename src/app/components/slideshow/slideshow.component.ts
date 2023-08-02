@@ -8,6 +8,12 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class SlideshowComponent implements OnInit {
   @Input() searchText = ''
   @Output() search= new EventEmitter<string>();
+
+  onSearch() {
+    this.search.emit(this.searchText);
+  }
+
+
   slides = [
     { image: '../../../assets/images/s1.jpg' , alt: ''},
     { image: '../../../assets/images/s2.jpg', alt: ''},
@@ -47,7 +53,5 @@ export class SlideshowComponent implements OnInit {
   public get currentSlideIndex(): number {
     return this.currentSlide;
   }
-  log(){
-    console.log("hello")
-  }
+
 }

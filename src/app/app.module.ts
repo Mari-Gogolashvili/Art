@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { NgxImageCompressService } from 'ngx-image-compress';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -18,8 +18,10 @@ import { AllComponent } from './pages/exhibitions/all/all.component';
 import { DetailsComponent } from './pages/exhibitions/details/details.component';
 import { SpinnerComponent } from './components/spinner/spinner.component';
 import { SlideshowComponent } from './components/slideshow/slideshow.component';
-import { SignInComponent } from './pages/sign-in/sign-in.component';
 import { FavoritesComponent } from './pages/favorites/favorites.component';
+import { UserComponent } from './pages/user/user.component';
+import { SignInComponent } from './pages/user/sign-in/sign-in.component';
+import { RegisterComponent } from './pages/user/register/register.component';
 
 @NgModule({
   declarations: [
@@ -36,13 +38,14 @@ import { FavoritesComponent } from './pages/favorites/favorites.component';
     AllComponent,
     DetailsComponent,
     SpinnerComponent,
-
     SlideshowComponent,
-     SignInComponent,
-     FavoritesComponent,
+    FavoritesComponent,
+    UserComponent,
+    SignInComponent,
+    RegisterComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
-  providers: [],
+  providers: [NgxImageCompressService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
