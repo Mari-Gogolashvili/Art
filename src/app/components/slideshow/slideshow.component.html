@@ -21,16 +21,14 @@
         <label for="search"></label>
         <input
           type="text"
-          id="input"
+          id="search"
           name="search"
           aria-label="Search"
           [(ngModel)]="searchText"
         />
-        <i
-          class="fa-solid fa-magnifying-glass"
-          id="search-btn"
-          (click)="search.emit(searchText)"
-        ></i>
+        <button id="search-btn" (click)="search.emit(searchText)">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
       </form>
     </div>
   </div>

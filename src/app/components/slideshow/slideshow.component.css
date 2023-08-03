@@ -86,7 +86,9 @@ form {
   box-shadow: 0 0 2px var(--shadowColor), 0 0 5px var(--shadowColor);
   z-index: 2;
 }
-
+.search-container a{
+background-color: red;
+}
 .active,
 .dot:hover {
   background-color: rgba(0, 0, 0, 0.587);

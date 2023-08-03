@@ -23,8 +23,6 @@ export class AllComponent {
     })
   );
 
-
-
   vm$ = combineLatest([this.data$, this.loading$, this.queryParams$]).pipe(
     map((array) => {
       const [data, loading, queryParams] = array;

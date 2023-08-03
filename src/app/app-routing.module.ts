@@ -16,7 +16,7 @@ const routes: Routes = [
     component: ExhibitionsComponent,
     children: [
       { path: 'all', component: AllComponent },
-      { path: 'details', component: DetailsComponent },
+      { path: ':id', component: DetailsComponent },
       { path: '', component: AllComponent },
     ],
   },

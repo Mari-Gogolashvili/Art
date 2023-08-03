@@ -11,6 +11,8 @@ export class SlideshowComponent implements OnInit {
 
   onSearch() {
     this.search.emit(this.searchText);
+    console.log(this.searchText);
+    
   }
 
 

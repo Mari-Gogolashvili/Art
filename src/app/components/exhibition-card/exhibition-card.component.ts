@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { data } from 'src/app/types/paintings';
+import { Data } from 'src/app/types/paintings';
 import { NgxImageCompressService } from 'ngx-image-compress';
 import { HttpClient } from '@angular/common/http';
 
@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./exhibition-card.component.css'],
 })
 export class ExhibitionCardComponent implements OnInit {
-  @Input() data!: data;
+  @Input() data!: Data;
   @Input() loading = false;
   compressedImageUrl: string = '';
   defaultImageUrl: string = '../../../assets/images/img_not_found.jpg';

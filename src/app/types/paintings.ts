@@ -1,4 +1,4 @@
-export interface data {
+export interface Data {
   id: number;
   image_url(image_url: any): unknown;
   compressedImageUrl: string;
@@ -100,7 +100,7 @@ export interface data {
 
 export interface getPaintingResponse {
   pagination: object;
-  data:[];
+  data:Data[];
   info: {};
   config: {};
 }
@@ -113,5 +113,9 @@ export interface Painting {
 }
 
 
+export interface getPaintingDetailResponse {
 
-
+  data:{};
+  info: {};
+  config: {};
+}

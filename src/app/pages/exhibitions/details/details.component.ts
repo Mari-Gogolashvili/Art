@@ -6,10 +6,10 @@ import { PaintingsService } from 'src/app/services/paintings.service';
 @Component({
   selector: 'app-details',
   templateUrl: './details.component.html',
-  styleUrls: ['./details.component.css']
+  styleUrls: ['./details.component.css'],
 })
 export class DetailsComponent {
-  data$ = this.activatedRoute.paramMap.pipe(
+  detailData$ = this.activatedRoute.paramMap.pipe(
     switchMap((paramMap) =>
       this.paintingsService.getPaintingById(Number(paramMap.get('id')))
     )
@@ -18,5 +18,4 @@ export class DetailsComponent {
     private activatedRoute: ActivatedRoute,
     private paintingsService: PaintingsService
   ) {}
-
 }
