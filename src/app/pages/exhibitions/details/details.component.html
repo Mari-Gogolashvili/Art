@@ -1,10 +1,30 @@
-<div class="container">
-    <div *ngIf="detailData$ | async as data">
-      <h1>{{ data.title }}</h1>
-      <h3>{{ data.date_start }}</h3>
-      <div *ngIf="!data">
-        <h1>Artwork not found</h1>
-      </div>
+<section *ngIf="data$ | async as data">
+  <div class="title">
+    <h1>{{data.data.title}}</h1>
+  </div>
+  <div class="container">
+
+    <div class="image-container">
+      <img *ngIf="data.data.image_id" src="https://www.artic.edu/iiif/2/{{data.data.image_id}}/full/843,/0/default.jpg" alt="">
+      <img *ngIf="!data.data.image_id" src="../../../../assets/images/img_not_found.jpg" alt=""> 
     </div>
-</div>
+    <div class="side-bar">
+      <ul>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+      </ul>
+    </div>
+    
+  </div>
+  <div class="text"></div>
+
+
+
+  <div *ngIf="!data.data">
+    <h1>Artwork not found</h1>
+  </div>
+</section>
+
+
 

@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ENVIRONMENT } from 'src/environment/environment';
-import { Painting, Data, getPaintingResponse, getPaintingDetailResponse } from '../types/paintings';
-import { BehaviorSubject, catchError, map, of } from 'rxjs';
+import { Painting, Data, getPaintingResponse} from '../types/paintings';
+import { BehaviorSubject } from 'rxjs';
 import { Router } from '@angular/router';
 
 @Injectable({
@@ -42,20 +42,22 @@ export class PaintingsService {
       });
   }
 
+
+
   searchPaintings(query: string) {
     this.loading$.next(true);
     this.http
-      .post<getPaintingDetailResponse>(`${this.baseUrl}/search`, {
+      .get<getPaintingResponse>(`${this.baseUrl}/search`, {
         params: { q: query },
       })
       .subscribe((response) => {
-        this.detailData$.next(response.data);
+        this.data$.next(response.data);
         this.loading$.next(false);
       });
   }
 
   getPaintingById(id: number) {
-    return this.http.get<Data>(`${this.baseUrl}/${id}`);
+    return this.http.get<{data: Data}>(`${this.baseUrl}/${id}`);
     
   }
 

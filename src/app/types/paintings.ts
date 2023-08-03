@@ -113,9 +113,3 @@ export interface Painting {
 }
 
 
-export interface getPaintingDetailResponse {
-
-  data:{};
-  info: {};
-  config: {};
-}

@@ -9,7 +9,7 @@ import { PaintingsService } from 'src/app/services/paintings.service';
   styleUrls: ['./details.component.css'],
 })
 export class DetailsComponent {
-  detailData$ = this.activatedRoute.paramMap.pipe(
+  data$ = this.activatedRoute.paramMap.pipe(
     switchMap((paramMap) =>
       this.paintingsService.getPaintingById(Number(paramMap.get('id')))
     )
