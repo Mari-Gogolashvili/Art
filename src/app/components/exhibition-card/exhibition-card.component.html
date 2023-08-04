@@ -7,14 +7,12 @@
     />
     <div class="icons">
       <a href=""><i class="fa-regular fa-heart"></i></a>
-      <a  class="details"  [routerLink]="['/exhibitions', data.id]">Details</a>
+      <a class="details" [routerLink]="['/exhibitions', data.id]">Details</a>
       <a href=""><i class="fa-solid fa-share"></i></a>
     </div>
   </div>
 
   <div class="card-content">
-    <h1>{{data.id}}</h1>
     <h2>{{ data.title }}</h2>
-    <h3>{{ data.artist_display }}</h3>
   </div>
 </div>

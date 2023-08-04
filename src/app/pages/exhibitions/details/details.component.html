@@ -1,29 +1,57 @@
 <section *ngIf="data$ | async as data">
+
   <div class="title">
     <h1>{{data.data.title}}</h1>
   </div>
+
   <div class="container">
 
     <div class="image-container">
       <img *ngIf="data.data.image_id" src="https://www.artic.edu/iiif/2/{{data.data.image_id}}/full/843,/0/default.jpg" alt="">
       <img *ngIf="!data.data.image_id" src="../../../../assets/images/img_not_found.jpg" alt=""> 
     </div>
-    <div class="side-bar">
+    <!-- <div class="side-bar">
       <ul>
-        <li><a href=""></a></li>
-        <li><a href=""></a></li>
-        <li><a href=""></a></li>
+        <li><a href="exhibitions/{{data.data.id}}#info">Info</a></li>
+        <li *ngIf="data.data.publication_history"><a href="exhibitions/{{data.data.id}}#publication-history">Publication History</a></li>
+        <li *ngIf="data.data.exhibition_history"><a href="exhibitions/{{data.data.id}}#exhibition-history">Exhibition History</a></li>
       </ul>
-    </div>
+    </div> -->
     
   </div>
-  <div class="text"></div>
+
+  <div class="info" id="info">
+    <h1>Details</h1>
+    <!-- <hr  class="infohr"> -->
+    <p> <span>Artist: </span>  {{data.data.artist_display}}</p>
+    <p> <span>Place of origin: </span>  {{data.data.place_of_origin}}</p>
+    <p> <span>style: </span>  {{data.data.style_title}}</p>
+    <p> <span> Start Date:</span>  {{data.data.date_start}}</p>
+    <p> <span> End Date: </span> {{data.data.date_end}}</p>
+    <p> <span> Fiscal year: </span> {{data.data.fiscal_year}}</p>
+    <p> <span> Dimentions:</span>  {{data.data.dimensions}}</p>
+  </div>
+
+
+  <div *ngIf="data.data.publication_history" class="publication-history" id="publication-history">
+    <h1>Publication History</h1>
+    <!-- <hr> -->
+    <p>{{data.data.publication_history}}</p>
+  </div>
+
+  <div *ngIf="data.data.exhibition_history" class="exhibition-history" id="exhibition-history">
+    <h1>Exhibition History</h1>
+    <!-- <hr> -->
+    <p>{{data.data.exhibition_history}}</p>
+  </div>
 
 
 
   <div *ngIf="!data.data">
     <h1>Artwork not found</h1>
   </div>
+
+
 </section>
 
 

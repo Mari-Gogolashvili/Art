@@ -21,6 +21,7 @@
   font-weight: 300;
   transition: 0.3s ease-in-out;
   outline: none;
+  scroll-behavior: smooth;
 }
 html {
   height: 100%;

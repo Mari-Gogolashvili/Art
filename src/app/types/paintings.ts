@@ -19,7 +19,7 @@ export interface Data {
   artist_display: string;
   place_of_origin: string;
   dimensions: string;
-  dimensions_detail: string[];
+  dimensions_detail: [];
   medium_display: string;
   inscriptions: string;
   credit_line: string;
@@ -100,7 +100,7 @@ export interface Data {
 
 export interface getPaintingResponse {
   pagination: object;
-  data:Data[];
+  data: Data[];
   info: {};
   config: {};
 }
@@ -111,5 +111,3 @@ export interface Painting {
   title: string;
   imageUrl: string;
 }
-
-

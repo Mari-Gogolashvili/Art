@@ -1,6 +1,10 @@
 section {
   padding-top: 5rem;
   width: 100%;
+  height: fit-content;
+  color: white;
+  display: flex;
+  flex-direction: column;
 }
 .title {
   font-size: 24px;
@@ -8,43 +12,117 @@ section {
   padding: 2rem;
   text-align: center;
 }
+.title h1 {
+  color: white;
+  font-size: 4rem;
+  text-shadow: 0 0 5px var(--shadowColor), 0 0 10px var(--shadowColor),
+    0 0 13px var(--shadowColor);
+}
 
 .container {
   width: 100%;
-  height: 80vh;
-  display: flex;
-  flex-direction: row;
+  height: 70vh;
 }
-.image-container {
+.container .image-container {
   width: 80%;
   height: 100%;
-
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: auto;
 }
-.image-container img {
-  width: 80%;
+.container .image-container img {
   height: 100%;
+  width: 100%;
   object-fit: cover;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  box-shadow: 0 0 5px var(--shadowColor), 0 0 10px var(--shadowColor),
+    0 0 15px var(--shadowColor);
 }
 
-.side-bar {
-  width: 20%;
-  height: auto;
+/* .side-bar {
+  grid-column: 11/13;
+  grid-row: 1/13;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .side-bar ul {
-  background-color: aqua;
   position: fixed;
   top: 15rem;
-  width: 20%;
+  border: 2px solid white;
+  padding: 5rem 1rem;
 }
 
-.text {
-  height: 100vh;
+ul li a {
+  color: white;
+} */
+
+.exhibition-history,
+.publication-history,
+.info {
+  padding: 2rem;
+  width: 80%;
+  margin: auto;
+}
+
+.exhibition-history h1,
+.publication-history h1,
+.info h1 {
+  /* text-align: center; */
+  margin-left: 2rem;
+  padding: 1rem;
+  font-size: 2.5rem;
+  text-shadow: 0 0 5px var(--shadowColor), 0 0 10px var(--shadowColor),
+    0 0 15px var(--shadowColor);
+  color: white;
+}
+
+/* hr {
+  border: .5px solid #f1cfff;
   width: 100%;
-  background-color: rgb(35, 95, 95);
+  margin: auto;
+  margin-bottom: 3.5rem;
+  color: white;
+
+} */
+/* .infohr{
+  width: 30%;
+} */
+.exhibition-history p,
+.publication-history p,
+.info p {
+  font-size: 1.1rem;
+  border-left: 2px solid rgb(236, 184, 246);
+  padding-left: 3rem;
+}
+
+span {
+  font-size: 1.3rem;
+  color: white;
+  text-shadow: 0 0 5px var(--shadowColor), 0 0 10px var(--shadowColor),
+    0 0 13px var(--shadowColor);
+}
+
+
+@media(max-width:651px){
+  .title h1{
+    font-size: 3rem;
+  }
+  .container .image-container{
+    width: 90%;
+  }
+  .exhibition-history,
+.publication-history,
+.info {
+  padding: 1rem;
+  width: 90%;
+  margin: auto;
+}
+.exhibition-history p,
+.publication-history p,
+.info p{
+  padding-left: 1rem;
+}
 }

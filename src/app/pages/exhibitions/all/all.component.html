@@ -1,5 +1,5 @@
  <div class="search">
-  <app-slideshow></app-slideshow>
+  <app-slideshow (search)="onSearch($event)"  ></app-slideshow>
 </div> 
 
 <ng-container *ngIf="vm$ | async as vm">

@@ -64,4 +64,15 @@ img {
 .card-content {
   padding-top: 2rem;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 10rem;
+}
+
+.card-content h2 {
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 5px var(--shadowColor), 0 0 10px var(--shadowColor);
+  font-size: 1.8rem;
 }

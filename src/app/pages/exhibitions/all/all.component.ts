@@ -37,4 +37,8 @@ export class AllComponent {
     private paintingsService: PaintingsService,
     private route: ActivatedRoute
   ) {}
+
+  onSearch(query: string) {
+    this.paintingsService.searchPaintings(query);
+  }
 }
