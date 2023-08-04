@@ -4,6 +4,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  padding-top: 5rem;
 }
 .bg-img {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
@@ -142,6 +143,9 @@
 }
 
 @media (max-width: 740px) {
+  .container{
+    height: fit-content;
+  }
   .content-container .title {
     grid-column: 2/12;
     grid-row: 2/4;

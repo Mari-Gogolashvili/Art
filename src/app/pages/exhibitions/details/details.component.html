@@ -21,7 +21,7 @@
   </div>
 
   <div class="info" id="info">
-    <h1>Details</h1>
+    <h1 data-aos="fade-right" data-aos-duration="3000" data-aos-once="true">Details</h1>
     <!-- <hr  class="infohr"> -->
     <p> <span>Artist: </span>  {{data.data.artist_display}}</p>
     <p> <span>Place of origin: </span>  {{data.data.place_of_origin}}</p>
@@ -34,13 +34,13 @@
 
 
   <div *ngIf="data.data.publication_history" class="publication-history" id="publication-history">
-    <h1>Publication History</h1>
+    <h1 data-aos="fade-right" data-aos-duration="3000" data-aos-once="true">Publication History</h1>
     <!-- <hr> -->
     <p>{{data.data.publication_history}}</p>
   </div>
 
   <div *ngIf="data.data.exhibition_history" class="exhibition-history" id="exhibition-history">
-    <h1>Exhibition History</h1>
+    <h1 data-aos="fade-right" data-aos-duration="3000" data-aos-once="true">Exhibition History</h1>
     <!-- <hr> -->
     <p>{{data.data.exhibition_history}}</p>
   </div>
@@ -53,6 +53,6 @@
 
 
 </section>
-
+<app-footer></app-footer>
 
 

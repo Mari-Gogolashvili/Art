@@ -76,3 +76,11 @@ img {
   text-shadow: 0 0 5px var(--shadowColor), 0 0 10px var(--shadowColor);
   font-size: 1.8rem;
 }
+
+
+@media (max-width: 454px){
+  .card {
+    width: 90vw;
+    margin: auto;
+  }
+}

@@ -18,10 +18,10 @@ import { AllComponent } from './pages/exhibitions/all/all.component';
 import { DetailsComponent } from './pages/exhibitions/details/details.component';
 import { SpinnerComponent } from './components/spinner/spinner.component';
 import { SlideshowComponent } from './components/slideshow/slideshow.component';
-import { FavoritesComponent } from './pages/favorites/favorites.component';
 import { UserComponent } from './pages/user/user.component';
 import { SignInComponent } from './pages/user/sign-in/sign-in.component';
 import { RegisterComponent } from './pages/user/register/register.component';
+
 
 @NgModule({
   declarations: [
@@ -39,7 +39,6 @@ import { RegisterComponent } from './pages/user/register/register.component';
     DetailsComponent,
     SpinnerComponent,
     SlideshowComponent,
-    FavoritesComponent,
     UserComponent,
     SignInComponent,
     RegisterComponent,
@@ -50,6 +49,7 @@ import { RegisterComponent } from './pages/user/register/register.component';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
+
   ],
   providers: [NgxImageCompressService],
   bootstrap: [AppComponent],

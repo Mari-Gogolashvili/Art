@@ -96,6 +96,7 @@ ul li a {
   font-size: 1.1rem;
   border-left: 2px solid rgb(236, 184, 246);
   padding-left: 3rem;
+
 }
 
 span {
@@ -105,24 +106,23 @@ span {
     0 0 13px var(--shadowColor);
 }
 
-
-@media(max-width:651px){
-  .title h1{
+@media (max-width: 651px) {
+  .title h1 {
     font-size: 3rem;
   }
-  .container .image-container{
+  .container .image-container {
     width: 90%;
   }
   .exhibition-history,
-.publication-history,
-.info {
-  padding: 1rem;
-  width: 90%;
-  margin: auto;
-}
-.exhibition-history p,
-.publication-history p,
-.info p{
-  padding-left: 1rem;
-}
+  .publication-history,
+  .info {
+    padding: 1rem;
+    width: 90%;
+    margin: auto;
+  }
+  .exhibition-history p,
+  .publication-history p,
+  .info p {
+    padding-left: 1rem;
+  }
 }

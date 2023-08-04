@@ -1,56 +1,65 @@
-header{
-    height: 5rem; width: 100%;
-    background-color:black ;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.255);
-    position: fixed;
-    z-index: 10;
+header {
+  height: 5rem;
+  width: 100%;
+  background-color: black;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.255);
+  position: fixed;
+  z-index: 10;
 }
-nav{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    
-
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
-.logo{
-    height: 5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.logo {
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.logo h1{
-    color: rgb(207, 207, 230);
-    font-size: 2.5rem;
+.logo h1 {
+  color: rgb(207, 207, 230);
+  font-size: 2.5rem;
 }
-.logo span{
-    color: rgb(177, 110, 215);
-}
-
-.menu ul{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-    gap: 2rem;
-}
-nav .icons ul{
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-}
-nav ul li a{
-    color: #f2ebfb;
-    font-size: 1.3rem;
-    transition: .3s;
-}
-nav ul li a:hover{
-    color: white;
-    text-shadow:0 0 10px #9667e0,
-                0 0 20px #9667e0,
-                0 0 30px #9667e0,
-                0 0 40px #9667e0,
-                0 0 50px #9667e0;
+.logo span {
+  color: rgb(177, 110, 215);
 }
 
+.menu ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  gap: 2rem;
+}
+nav .icons ul {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+nav ul li a {
+  color: #f2ebfb;
+  font-size: 1.3rem;
+  transition: 0.3s;
+  cursor: pointer;
+}
+nav ul li a i{
+cursor: pointer;
+}
+nav ul li a:hover {
+  color: white;
+  text-shadow: 0 0 10px #9667e0, 0 0 20px #9667e0, 0 0 30px #9667e0,
+    0 0 40px #9667e0, 0 0 50px #9667e0;
+}
 
-  
+@media (max-width: 333px) {
+    .logo h1 {
+        font-size: 2rem
+    }
+    nav ul li a{
+        font-size: 1rem;
+    }
+    .menu ul{
+        gap: 1rem;
+    }
+}
