@@ -17,7 +17,7 @@ const routes: Routes = [
     children: [
       { path: 'all', component: AllComponent },
       { path: ':id', component: DetailsComponent },
-      { path: '', component: AllComponent },
+      { path: '', component: AllComponent ,  pathMatch:'full' },
     ],
   },
   {
