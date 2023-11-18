@@ -61,6 +61,7 @@
             id="password"
             class="form-control"
             formControlName="password"
+            (input)="controls.confirmPassword.updateValueAndValidity()"
             required
           />
           <label for="password">Password <span>*</span></label>
