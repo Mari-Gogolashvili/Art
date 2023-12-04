@@ -119,12 +119,15 @@ input {
   margin-top: 0.6rem;
 }
 
-.input-container i {
+.input-container span {
   position: absolute;
   right: 8px;
   color: #fff;
   font-size: 1.2em;
   top: 20px;
+}
+.password-span {
+  cursor: pointer;
 }
 .forget h1 {
   text-align: center;
@@ -164,6 +167,20 @@ button:hover {
 }
 button:hover a {
   text-shadow: 0 0 5px var(--shadowColor), 0 0 8px var(--shadowColor);
+}
+button:disabled {
+  border: 1px solid rgb(139, 139, 139);
+  cursor: not-allowed;
+}
+button:disabled a {
+  color: rgb(139, 139, 139);
+  cursor: not-allowed;
+}
+button:disabled:hover {
+  box-shadow: none;
+}
+button:disabled:hover a {
+  text-shadow: none;
 }
 
 @media (max-width: 1133px) {

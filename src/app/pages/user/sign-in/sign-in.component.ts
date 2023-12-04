@@ -4,15 +4,17 @@ import { FormBuilder, Validators } from '@angular/forms';
 @Component({
   selector: 'app-sign-in',
   templateUrl: './sign-in.component.html',
-  styleUrls: ['./sign-in.component.css']
+  styleUrls: ['./sign-in.component.css'],
 })
 export class SignInComponent {
+  visible = true;
+  changeType = true;
 
-  signInForm=this.fb.group({
-    email:['' , [Validators.required , Validators.email]],
-    password:['',[Validators.required]]
-});
-  constructor(private fb: FormBuilder){}
+  signInForm = this.fb.group({
+    email: ['', [Validators.required, Validators.email]],
+    password: ['', [Validators.required]],
+  });
+  constructor(private fb: FormBuilder) {}
   get controls() {
     return this.signInForm.controls;
   }
@@ -20,5 +22,10 @@ export class SignInComponent {
     console.log(this.signInForm.value);
     this.signInForm.reset();
     console.log(this.signInForm.value);
+  }
+
+  viewPassword() {
+    this.visible = !this.visible;
+    this.changeType = !this.changeType;
   }
 }

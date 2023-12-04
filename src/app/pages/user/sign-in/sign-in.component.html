@@ -9,7 +9,7 @@
           <h1>Sign In</h1>
         </div>
         <div class="input-container">
-          <i class="fa-regular fa-envelope"></i>
+          <span><i class="fa-regular fa-envelope"></i></span>
           <input
             type="text"
             name="email"
@@ -25,34 +25,40 @@
             Email is invalid.
           </div>
           <div
-          class="validation-error"
-          *ngIf="controls.email.errors?.['required'] && controls.email.dirty"
-        >
-          This field is required!
-        </div>
+            class="validation-error"
+            *ngIf="controls.email.errors?.['required'] && controls.email.dirty"
+          >
+            This field is required!
+          </div>
         </div>
 
         <div class="input-container">
-          <i class="fa-solid fa-lock"></i>
+          <span class="password-span" (click)="viewPassword()"
+            ><i
+              [ngClass]="visible ? 'fa-solid fa-lock' : 'fa-solid fa-lock-open'"
+            ></i
+          ></span>
           <input
-            type="password"
+            [type]="changeType ? 'password' : 'text'"
             required
             class="form-control"
             formControlName="password"
           />
           <label for="password">Password</label>
           <div
-          class="validation-error"
-          *ngIf="controls.password.errors?.['required'] && controls.password.dirty"
-        >
-          This field is required!
-        </div>
+            class="validation-error"
+            *ngIf="controls.password.errors?.['required'] && controls.password.dirty"
+          >
+            This field is required!
+          </div>
         </div>
         <div class="forget">
           <h1><a href="#">Forget Password?</a></h1>
         </div>
         <div class="buttons">
-          <button><a routerLink="/user/signIn">Log in</a></button>
+          <button [disabled]="signInForm.invalid">
+            <a routerLink="/user/signIn">Log in</a>
+          </button>
           <button><a routerLink="/user/register"> Register</a></button>
         </div>
       </form>

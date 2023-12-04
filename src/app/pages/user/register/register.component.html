@@ -6,7 +6,7 @@
           <h1>Register</h1>
         </div>
         <div class="input-container">
-          <i class="fa-regular fa-user"></i>
+          <span class="icon-span"> <i class="fa-regular fa-user"></i> </span>
           <input
             type="text"
             id="username"
@@ -31,7 +31,9 @@
           </div>
         </div>
         <div class="input-container">
-          <i class="fa-regular fa-envelope"></i>
+          <span class="icon-span">
+            <i class="fa-regular fa-envelope"></i>
+          </span>
           <input
             type="text"
             id="email"
@@ -41,23 +43,27 @@
           />
           <label for="email">Email <span>*</span> </label>
           <div
-          class="validation-error"
-          *ngIf="controls.email.invalid && controls.email.dirty"
-        >
-          Email is invalid.
-        </div>
-        <div
-        class="validation-error"
-        *ngIf="controls.email.errors?.['required'] && controls.email.dirty"
-      >
-        This field is required!
-      </div>
+            class="validation-error"
+            *ngIf="controls.email.invalid && controls.email.dirty"
+          >
+            Email is invalid.
+          </div>
+          <div
+            class="validation-error"
+            *ngIf="controls.email.errors?.['required'] && controls.email.dirty"
+          >
+            This field is required!
+          </div>
         </div>
 
         <div class="input-container">
-          <i class="fa-solid fa-lock"></i>
+          <span class="icon-span password-span" (click)="viewPassword()"
+            ><i
+              [ngClass]="visible ? 'fa-solid fa-lock' : 'fa-solid fa-lock-open'"
+            ></i>
+          </span>
           <input
-            type="password"
+            [type]="changeType ? 'password' : 'text'"
             id="password"
             class="form-control"
             formControlName="password"
@@ -67,24 +73,30 @@
           <label for="password">Password <span>*</span></label>
 
           <div
-          class="validation-error"
-          *ngIf="controls.password.errors?.['required'] && controls.password.dirty"
-        >
-          Password is required!
-        </div>
-        <div
-          class="validation-error"
-          *ngIf="controls.password.errors?.['minlength']"
-        >
-          The password must be at least
-          {{ controls.password.errors?.['minlength'].requiredLength}} characters
-          long.
-        </div>
+            class="validation-error"
+            *ngIf="controls.password.errors?.['required'] && controls.password.dirty"
+          >
+            Password is required!
+          </div>
+          <div
+            class="validation-error"
+            *ngIf="controls.password.errors?.['minlength']"
+          >
+            The password must be at least
+            {{ controls.password.errors?.['minlength'].requiredLength}}
+            characters long.
+          </div>
         </div>
         <div class="input-container">
-          <i class="fa-solid fa-lock"></i>
+          <span class="icon-span password-span" (click)="viewConfirmPassword()"
+            ><i
+              [ngClass]="
+                visibleC ? 'fa-solid fa-lock' : 'fa-solid fa-lock-open'
+              "
+            ></i>
+          </span>
           <input
-            type="password"
+            [type]="changeTypeC ? 'password' : 'text'"
             id="confirmPassword"
             class="form-control"
             formControlName="confirmPassword"
@@ -93,14 +105,11 @@
           <label for="password">Confirm Password <span>*</span></label>
 
           <div
-          class="validation-error"
-          *ngIf="controls.confirmPassword.errors?.['confirmPassword'] && controls.confirmPassword.dirty"
-        >
-          {{ controls.confirmPassword.errors?.['confirmPassword'] }}
-        </div>
-
-
-
+            class="validation-error"
+            *ngIf="controls.confirmPassword.errors?.['confirmPassword'] && controls.confirmPassword.dirty"
+          >
+            {{ controls.confirmPassword.errors?.['confirmPassword'] }}
+          </div>
         </div>
         <div class="buttons">
           <button [disabled]="registerForm.invalid">

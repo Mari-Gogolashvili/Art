@@ -1,5 +1,11 @@
 import { Component } from '@angular/core';
-import { AbstractControl, NonNullableFormBuilder, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
+import {
+  AbstractControl,
+  NonNullableFormBuilder,
+  ValidationErrors,
+  ValidatorFn,
+  Validators,
+} from '@angular/forms';
 
 @Component({
   selector: 'app-register',
@@ -7,6 +13,10 @@ import { AbstractControl, NonNullableFormBuilder, ValidationErrors, ValidatorFn,
   styleUrls: ['./register.component.css'],
 })
 export class RegisterComponent {
+  visible = true;
+  changeType = true;
+  visibleC = true;
+  changeTypeC = true;
   registerForm = this.fb.group({
     username: [
       '',
@@ -17,8 +27,8 @@ export class RegisterComponent {
       ],
     ],
     email: ['', [Validators.required, Validators.email]],
-    password:['',[Validators.required , Validators.minLength(8)]],
-    confirmPassword:['']
+    password: ['', [Validators.required, Validators.minLength(8)]],
+    confirmPassword: [''],
   });
   constructor(private fb: NonNullableFormBuilder) {
     this.controls.confirmPassword.setValidators([
@@ -42,5 +52,14 @@ export class RegisterComponent {
       }
       return null;
     };
+  }
+
+  viewPassword() {
+    this.visible = !this.visible;
+    this.changeType = !this.changeType;
+  }
+  viewConfirmPassword() {
+    this.visibleC = !this.visibleC;
+    this.changeTypeC = !this.changeTypeC;
   }
 }
