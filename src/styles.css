@@ -8,7 +8,7 @@
 }
 ::selection {
   background-color: rgb(199, 155, 244);
-  color: white;
+  color: rgb(187, 175, 175);
 }
 * {
   margin: 0;
